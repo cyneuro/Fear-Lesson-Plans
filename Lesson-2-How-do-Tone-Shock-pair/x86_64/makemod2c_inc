@@ -1,0 +1,136 @@
+./AMPA_NMDA_LTP.c: ../modfiles/AMPA_NMDA_LTP.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "AMPA_NMDA_LTP.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./AMPA_NMDA_LTP.o: ./AMPA_NMDA_LTP.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
+./AMPA_NMDA_STP.c: ../modfiles/AMPA_NMDA_STP.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "AMPA_NMDA_STP.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./AMPA_NMDA_STP.o: ./AMPA_NMDA_STP.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
+./Gfluct_new_exc.c: ../modfiles/Gfluct_new_exc.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "Gfluct_new_exc.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./Gfluct_new_exc.o: ./Gfluct_new_exc.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
+./Gfluct_new_inh.c: ../modfiles/Gfluct_new_inh.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "Gfluct_new_inh.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./Gfluct_new_inh.o: ./Gfluct_new_inh.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
+./cadyn.c: ../modfiles/cadyn.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "cadyn.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./cadyn.o: ./cadyn.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
+./capool.c: ../modfiles/capool.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "capool.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./capool.o: ./capool.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
+./currentclamp.c: ../modfiles/currentclamp.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "currentclamp.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./currentclamp.o: ./currentclamp.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
+./h.c: ../modfiles/h.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "h.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./h.o: ./h.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
+./im.c: ../modfiles/im.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "im.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./im.o: ./im.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
+./kadist.c: ../modfiles/kadist.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "kadist.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./kadist.o: ./kadist.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
+./kaprox.c: ../modfiles/kaprox.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "kaprox.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./kaprox.o: ./kaprox.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
+./kdrca1.c: ../modfiles/kdrca1.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "kdrca1.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./kdrca1.o: ./kdrca1.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
+./leak.c: ../modfiles/leak.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "leak.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./leak.o: ./leak.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
+./na3.c: ../modfiles/na3.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "na3.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./na3.o: ./na3.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
+./nap.c: ../modfiles/nap.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "nap.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./nap.o: ./nap.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
+./pyr2pyr.c: ../modfiles/pyr2pyr.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "pyr2pyr.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./pyr2pyr.o: ./pyr2pyr.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
+./sahp.c: ../modfiles/sahp.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "../modfiles";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "sahp.mod" -o "/Users/gregglickert/Documents/GitHub/Fear-Lesson-Plans/Lesson-2-How-do-Tone-Shock-pair/x86_64")
+
+./sahp.o: ./sahp.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I"../modfiles" $(INCLUDES) -fPIC -c $< -o $@
+
