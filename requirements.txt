@@ -1,0 +1,9 @@
+# Colab subset of pyproject.toml (Jupyter is omitted; Colab already provides it).
+# Keep the shared pins in sync when bumping versions locally with Poetry.
+# Note: bmtk is NOT listed here; notebooks that need it install bmtk separately in Colab.
+neuron==9.0.2
+ipywidgets==7.7.1
+matplotlib>=3.7
+numpy>=1.23
+pandas>=2.0
+h5py>=3.8

@@ -196,32 +196,41 @@ PROCEDURE oup() {		: use Scop function normrand(mean, std_dev)
 
 
 VERBATIM
+#ifndef NRN_VERSION_GTEQ_8_2_0
 double nrn_random_pick(void* r);
 void* nrn_random_arg(int argpos);
+#define RANDCAST
+#else
+#define RANDCAST (Rand*)
+#endif
 ENDVERBATIM
 
 FUNCTION randGen() {
 VERBATIM
+#ifndef NRNBBCORE
    if (_p_randObjPtr) {
       /*
       :Supports separate independent but reproducible streams for
       : each instance. However, the corresponding hoc Random
       : distribution MUST be set to Random.normal(0,1)
       */
-      _lrandGen = nrn_random_pick(_p_randObjPtr);
+      _lrandGen = nrn_random_pick(RANDCAST _p_randObjPtr);
    }else{
       hoc_execerror("Random object ref not set correctly for randObjPtr"," only via hoc Random");
    }
+#endif
 ENDVERBATIM
 }
 
 PROCEDURE setRandObj() {
 VERBATIM
+#ifndef NRNBBCORE
    void** pv4 = (void**)(&_p_randObjPtr);
    if (ifarg(1)) {
       *pv4 = nrn_random_arg(1);
    }else{
       *pv4 = (void*)0;
    }
+#endif
 ENDVERBATIM
 }
