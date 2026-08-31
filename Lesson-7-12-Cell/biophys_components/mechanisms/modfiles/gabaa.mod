@@ -150,10 +150,6 @@ PROCEDURE release() { LOCAL q
 
   	   R = R1 * exptable (- Beta * (t - (lastrelease + Cdur)))
 	}
-
-	VERBATIM
-	return 0;
-	ENDVERBATIM
 }
 
 FUNCTION exptable(x) { 
